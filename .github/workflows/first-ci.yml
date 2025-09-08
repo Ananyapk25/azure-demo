@@ -1,0 +1,16 @@
+name: First CI
+
+on: push
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print greeting
+        run: echo "CI is working 🎉"
+
+      - name: Show who triggered this workflow
+        run: echo "This was run by ${{ github.actor }}"
+
+      - name: Show the branch
+        run: echo "Branch = ${{ github.ref }}"
